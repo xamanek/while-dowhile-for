@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Exercizio Bucles</title>
+	<meta charset="utf-8" />  
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+ <script>
+
+/* ________Do While______________
+ //Repetir hasta que no sea nulo. Pedir el nombre al usuario, si deja el campo vacio repetir hasta que lo complete
+ */
+ 
+ /*do {
+ nombre=prompt("escribe tu nombre");
+ }
+ while(nombre=="")
+ document.write("Hola "+nombre) -->
+ */
+ 
+ /*
+ ____While________
+ //Ex: Mostrar pares. Pedir un numero al ususario. Mostrar los numeros pares que hay desde ese numero decrecientemente hastas 0. (Si el numero introducido no es par, restar -1 para convertirlo en par)
+ ________________________
+ 
+ // 1. Pedir un numero al usuario(prompt,Number,variable)
+ 
+ var numero= Number (prompt("Escribe un numero"));
+ 
+ // 2. Evaluar si es par o impar (numero%2)
+ // 2.1 Si es impar restar 1 (if, numero-1)
+ 
+ if (numero%2 !=0) //es impar
+ {
+	numero=numero-1; //numero-=1
+ }
+ 
+ // 3. Mostrar en pantalla los numero pares descendientemente (numero-2)
+ // 3.1 Repetir la operacion hasta que lleguemos al 0
+ 
+ while (numero>=0)
+ {
+	document.write(numero+"<br>");
+	numero=numero-2; //numero-=2
+ }
+ __________________________*/
+ 
+ /*_______While_______
+ Ex: Sumar productos
+ Preguntar quantos productos va a comprar
+ Preguntar (tantas veces como productos que quiere comprar) el precio de ese productos.
+ Mostrar en pantalla:
+ - Vas a comprar X producots.
+ - El precio de  cada prod (el 1 vale tot euro, el 2 vale tott eruo, ecc)
+ - E ltotal de la compra es ... Euro
+ 
+ NOTA: se necesitan 3 variables, una con el numero total de productos, otra con el precio da cada prod., y otra para ir almacenando la suma de los precios
+ 
+ ________________________*/
+ 
+ /*//Preguntar quantos productos va a comprar
+ var numprod=Number(prompt("¿Quantos productos va a comprar?"));
+ var i=1;
+ var precio;
+ var suma=0;
+ 
+ document.write("vas a comprar " +numprod + " productos");
+ 
+ while(numprod>0)
+ {
+	var precio=Number(prompt("Precio del producot"));
+	numprod= numprod-1;
+	document.write("<br>- El producto "+i+" vale "+precio+" euros");
+	i++;
+	suma= suma+precio;
+ }
+document.write("<br>El total de la compra es "+suma+" euros");
+
+var numprod=Number(prompt("Quanti prodotti?"));
+var i=1;
+var precio;
+var suma=0;
+
+while(numprod>=i)
+{
+	precio=Number(prompt("Precio del producto"+i));
+	document.write("<br>El producto "+i+" sale"+precio" euro");
+	i++;
+	
+}
+
+*/
+
+
+/* _______for_______
+ex: Crear una lista desplegable de años desde 1950 hasta 2019
+En el bucle for solo ha de estar las options.
+________________________
+
+ document.write("<select name='any'>");
+ for (i=1950;i<=2019;i++){
+	document.write("<option value='"+i+"'>"+i+"</option>");
+ }
+ document.write("</select>");
+ 
+ document.write("<select name='mes'>");
+ for (e=01;e<=12;e++){
+	document.write("<option value='"+e+"'>"+e+"</option>");
+ }
+ document.write("</select>");
+ 
+ document.write("<select name='dia'>");
+ for (a=01;a<=31;a++){
+	document.write("<option value='"+a+"'>"+a+"</option>");
+ }
+ document.write("</select>");
+ _____es como HTML ____While________
+ 
+ <select name="any">
+	<option value="1950">1950</option>
+	<option value="1951">1951</option>
+	<option value="1952">1952</option>
+	<option value="1953">1953</option>
+ </select>
+ */
+
+
+for(j=1;j<=10;j++){
+document.write("<ul>");
+ for (i=1;i<=10;i++){
+	document.write("<li>"+j+"*"+i+"="+(i*j)+"</li>");
+ }
+ document.write("</ul>");
+ }
+ 
+ </script>
+
+ 
+
+
+</body>
+</html>
